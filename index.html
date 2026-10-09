@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaQuest | Learn Java</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">&lt;/&gt;</span>
+            JavaQuest
+        </a>
+
+        <span class="status">
+            <span class="dot"></span>
+            Learning Mode
+        </span>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <p class="eyebrow">YOUR JAVA LEARNING SPACE</p>
+
+            <h1>
+                Master Java,<br>
+                <span>one quiz at a time.</span>
+            </h1>
+
+            <p class="subtitle">
+                Learn concepts, test your knowledge, and improve
+                your coding skills with interactive quizzes.
+            </p>
+
+            <a href="#topics" class="primary-btn">
+                Explore Topics &rarr;
+            </a>
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <article class="stat-card">
+                <span class="stat-label">AVAILABLE TOPICS</span>
+                <h2>04</h2>
+                <p>Core Java concepts</p>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-label">QUESTIONS</span>
+                <h2 id="question-count">16</h2>
+                <p>Ready to practice</p>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-label">BEST SCORE</span>
+                <h2 id="best-score">--</h2>
+                <p>Your highest percentage</p>
+            </article>
+
+        </section>
+
+
+        <!-- Java Topics -->
+        <section id="topics" class="topics-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">START LEARNING</p>
+                    <h2>Choose your topic</h2>
+                </div>
+
+                <span class="muted">4 learning paths</span>
+            </div>
+
+
+            <div class="topic-grid">
+
+                <!-- Topic 1 -->
+                <article class="topic-card">
+                    <span class="topic-number">01</span>
+
+                    <div class="topic-icon">01</div>
+
+                    <h3>Java Basics</h3>
+
+                    <p>
+                        Learn syntax, variables, data types,
+                        and operators.
+                    </p>
+
+                    <button class="topic-btn" data-topic="basics">
+                        Start Quiz &rarr;
+                    </button>
+                </article>
+
+
+                <!-- Topic 2 -->
+                <article class="topic-card">
+                    <span class="topic-number">02</span>
+
+                    <div class="topic-icon">02</div>
+
+                    <h3>Loops</h3>
+
+                    <p>
+                        Understand for, while, and do-while loops.
+                    </p>
+
+                    <button class="topic-btn" data-topic="loops">
+                        Start Quiz &rarr;
+                    </button>
+                </article>
+
+
+                <!-- Topic 3 -->
+                <article class="topic-card">
+                    <span class="topic-number">03</span>
+
+                    <div class="topic-icon">03</div>
+
+                    <h3>Arrays</h3>
+
+                    <p>
+                        Learn indexing, elements, and array basics.
+                    </p>
+
+                    <button class="topic-btn" data-topic="arrays">
+                        Start Quiz &rarr;
+                    </button>
+                </article>
+
+
+                <!-- Topic 4 -->
+                <article class="topic-card">
+                    <span class="topic-number">04</span>
+
+                    <div class="topic-icon">04</div>
+
+                    <h3>OOP Concepts</h3>
+
+                    <p>
+                        Explore classes, objects, inheritance,
+                        and polymorphism.
+                    </p>
+
+                    <button class="topic-btn" data-topic="oop">
+                        Start Quiz &rarr;
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="quiz-panel hidden">
+
+            <div class="quiz-top">
+                <div>
+                    <p class="eyebrow">PRACTICE SESSION</p>
+                    <h2 id="quiz-title">Java Basics</h2>
+                </div>
+
+                <button id="exit-quiz" class="text-btn">
+                    Exit Quiz ✕
+                </button>
+            </div>
+
+
+            <!-- Question Progress -->
+            <div class="progress-info">
+                <span id="question-number">Question 1 of 4</span>
+                <span id="progress-percent">25%</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+
+            <!-- Question Card -->
+            <div class="question-card">
+
+                <p id="question-text" class="question-text">
+                    Your question will appear here.
+                </p>
+
+                <div id="options" class="options">
+                    <!-- Options are inserted by JavaScript -->
+                </div>
+
+                <div id="feedback" class="feedback hidden">
+                    <!-- Answer explanation appears here -->
+                </div>
+
+                <button id="next-btn" class="primary-btn next-btn" disabled>
+                    Check Answer &rarr;
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- Results Section -->
+        <section id="results" class="results-panel hidden">
+
+            <p class="eyebrow">SESSION COMPLETED</p>
+
+            <div class="result-icon">✓</div>
+
+            <h2 id="result-title">Well done!</h2>
+
+            <p id="result-message" class="subtitle">
+                Keep building your Java skills.
+            </p>
+
+
+            <div class="result-score">
+                <span id="result-score">0%</span>
+
+                <p id="result-detail">
+                    0 out of 4 correct
+                </p>
+            </div>
+
+
+            <div class="result-actions">
+
+                <button id="retry-btn" class="primary-btn">
+                    Try Again ↻
+                </button>
+
+                <button id="home-btn" class="secondary-btn">
+                    Back to Topics
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            JavaQuest <span>·</span>
+            Built for learning Java
+        </p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
